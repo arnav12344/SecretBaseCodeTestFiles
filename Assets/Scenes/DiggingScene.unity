@@ -963,8 +963,6 @@ GameObject:
   m_Component:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
-  - component: {fileID: 534669906}
-  - component: {fileID: 534669907}
   - component: {fileID: 534669910}
   m_Layer: 0
   m_Name: Main Camera
@@ -1039,56 +1037,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 269856752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &534669906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b25c4f659e9d0f84d9897b9f38efef04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voxelWorld: {fileID: 35699114}
-  leftClickAddsTerrain: 1
-  deformSpeed: 0.1
-  deformRange: 3
-  maxReachDistance: Infinity
-  flatteningKey: 306
-  paintColor:
-    rgba: 4294954496
-  playerCamera: {fileID: 534669905}
-  _isFlattening: 0
-  _flatteningOrigin:
-    x: 0
-    y: 0
-    z: 0
-  _flatteningNormal:
-    x: 0
-    y: 0
-    z: 0
---- !u!114 &534669907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fceb88e3d7c83554b9539a0da91feda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 30
-  sensitivity: 3
-  minimumFieldOfView: 2
-  maximumFieldOfView: 170
-  zoomSpeed: 3
-  _cam: {fileID: 0}
-  _rotationX: 0
-  _rotationY: 0
 --- !u!136 &534669910
 CapsuleCollider:
   m_ObjectHideFlags: 0
