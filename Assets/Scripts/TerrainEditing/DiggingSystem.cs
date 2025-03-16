@@ -19,8 +19,8 @@ public class DiggingSystem : MonoBehaviour
 
     [Header("Radius Adjustment")]
     [SerializeField] private float scrollSensitivity = 0.5f; // How fast the dig radius changes
-    [SerializeField] private float minDigRadius = 0.5f;        // Minimum allowed dig radius
-    [SerializeField] private float maxDigRadius = 10f;         // Maximum allowed dig radius
+    [SerializeField] private float minDigRadius = 1.5f;        // Minimum allowed dig radius
+    [SerializeField] private float maxDigRadius = 15f;         // Maximum allowed dig radius
 
     private Coroutine digCoroutine;
 
@@ -48,6 +48,15 @@ public class DiggingSystem : MonoBehaviour
                 StopCoroutine(digCoroutine);
                 digCoroutine = null;
             }
+        }
+        HandleDigging();
+    }
+    void HandleDigging()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, maxReachDistance))
+        {
+            DiggingIndicator.instance.DrawCircle(hit.point, digRadius);
         }
     }
 
