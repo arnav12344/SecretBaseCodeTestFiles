@@ -34,9 +34,9 @@ public class UndergroundRockDigger : MonoBehaviour
 
         for (int i = 0; i < numberOfRocks; i++)
         {
-            float randomX = Random.Range(minX, maxX);
-            float randomZ = Random.Range(minZ, maxZ);
-            Vector3 startPosition = new Vector3(randomX, raycastStartHeight, randomZ);
+            float randomX = transform.position.x+ Random.Range(minX, maxX);
+            float randomZ = transform.position.z + Random.Range(minZ, maxZ);
+            Vector3 startPosition = new Vector3( randomX, raycastStartHeight, randomZ);
 
             Ray ray = new Ray(startPosition, Vector3.down);
             RaycastHit hit;
